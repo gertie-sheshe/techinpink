@@ -14,8 +14,21 @@
   app = express(),
 
   // Define your port
-  port = 3030;
+  port = 3030,
 
+  // Require the config file
+  config = require('./config/config');
+
+  // Connect to the database
+  mongoose.connect(config.db, function(err) {
+    if (err) {
+      console.log('Could not connect to database');
+    } else {
+      console.log('Connected to database techinpink');
+    }
+  });
+
+  // Start up the server
   app.listen(port, function(err) {
     if (err) {
       console.log('Cannot connect to port');
