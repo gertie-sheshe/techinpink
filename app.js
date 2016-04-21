@@ -17,7 +17,10 @@
   port = 3030,
 
   // Require the config file
-  config = require('./config/config');
+  config = require('./config/config'),
+
+  //Dependency to help with path
+  path = require('path');
 
   // Connect to the database
   mongoose.connect(config.db, function(err) {
@@ -26,6 +29,12 @@
     } else {
       console.log('Connected to database techinpink');
     }
+  });
+
+  app.get('/', function(req, res) {
+    // Deliver html file
+    res.sendFile(path.join(__dirname + '/public/index.html'));
+    app.use(express.static(__dirname + '/public'));
   });
 
   // Start up the server
