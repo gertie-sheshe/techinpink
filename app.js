@@ -20,7 +20,10 @@
   config = require('./config/config'),
 
   //Dependency to help with path
-  path = require('path');
+  path = require('path'),
+
+  // routes
+  routes = require('./server/routes/member');
 
   // Connect to the database
   mongoose.connect(config.db, function(err) {
@@ -31,11 +34,13 @@
     }
   });
 
+  // Default path or route
   app.get('/', function(req, res) {
     // Deliver html file
     res.sendFile(path.join(__dirname + '/public/index.html'));
     app.use(express.static(__dirname + '/public'));
   });
+
 
   // Start up the server
   app.listen(port, function(err) {
