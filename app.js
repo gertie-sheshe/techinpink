@@ -22,8 +22,24 @@
   //Dependency to help with path
   path = require('path'),
 
+  // Body Parser
+  bodyParser = require('body-parser'),
+
+  // Controller
+  Member = require('./server/controllers/member');
+
   // routes
-  routes = require('./server/routes/member');
+  // routes = require('./server/routes/member');
+  app.get('/api/save', function(req, res) {
+    res.send('Tumetoka server');
+  });
+
+  app.use(bodyParser.json());
+
+  // Routes 
+  app.get('/api/view', Member.find);
+  app.post('/api/save', Member.create);
+
 
   // Connect to the database
   mongoose.connect(config.db, function(err) {

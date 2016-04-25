@@ -1,16 +1,10 @@
 (function() {
   'use strict';
    // Require controllers
-   var Member = require('../controllers/member.js'),
-   express = require('express'),
-   route = express.Router();
+   var Member = require('../controllers/member.js');
 
-   route.get('/api/save', function(req, res) {
-     res.send('Ola');
-    //  console.log('Route is working');
-   });
+   module.exports = function(app) {
+     
+   };
 
-
-   // Export the routes
-   module.exports = route;
 })();

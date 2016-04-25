@@ -2,19 +2,33 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script src="./js/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Tech In Pink</title>
   </head>
   <body>
     <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">tech in pink</a>
+    <div class="nav-wrapper #ff4081 pink accent-4">
+      <a href="#" class="brand-logo">RegisterAPP</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="sass.html">Sass</a></li>
       </ul>
     </div>
   </nav>
+  <div>
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+      </div>
+    </form>
+  </div>
+  <a id="get-button" class="waves-effect waves-light btn #880e4f pink darken-4">GET</a>
+  <a id="post-button" class="waves-effect waves-light btn #880e4f pink darken-4">POST</a>
   </body>
 </html>

@@ -13,6 +13,7 @@
       member.name = req.body.name;
       member.save(function(err, savedMember) {
         if (err) {
+          console.log(err);
           return res.status(500).send(err);
         } else {
           return res.status(200).send(savedMember);
@@ -26,6 +27,8 @@
     },
 
     delete: function() {},
-    find: function() {}
+    find: function(req, res) {
+      res.send({name: 'Gerty', age: 21});
+    }
   };
 })();
