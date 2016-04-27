@@ -1,4 +1,5 @@
 $(function () {
+  // GET function
   $('#get-button').on('click', function() {
     $.ajax({
       url: '/api/view',
@@ -9,6 +10,7 @@ $(function () {
     });
   });
 
+  // POST function
   $('#post-button').on('click', function() {
     $.ajax({
       url: '/api/save',
@@ -19,5 +21,10 @@ $(function () {
         console.log('Watuuuu', response);
       }
     });
+  });
+
+  // DELETE function
+  $('#delete-button').on('click', function() {
+    
   });
 });

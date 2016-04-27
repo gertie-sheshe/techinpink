@@ -1,3 +1,28 @@
 nav .brand-logo {
   left: 3%;
 }
+
+#black {
+  background-color: #000;
+}
+
+#back {
+ background: url("../images/rejista.jpeg");
+ background-size: cover;
+ background-position: center center;
+ background-attachment: fixed;
+ background-repeat: no-repeat;
+ opacity: 0.5;
+ height: 100vh;
+ width: 100vw;
+ top: 0;
+}
+
+.content {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   min-width: 40%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+}

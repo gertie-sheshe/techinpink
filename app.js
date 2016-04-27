@@ -30,13 +30,9 @@
 
   // routes
   // routes = require('./server/routes/member');
-  app.get('/api/save', function(req, res) {
-    res.send('Tumetoka server');
-  });
-
   app.use(bodyParser.json());
 
-  // Routes 
+  // Routes
   app.get('/api/view', Member.find);
   app.post('/api/save', Member.create);
 
