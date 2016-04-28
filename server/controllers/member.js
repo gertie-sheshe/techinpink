@@ -27,7 +27,8 @@
       // Assignment. Learn how to do this
     },
 
-    delete: function() {
+    delete: function(req, res) {
+      console.log('KWA SERVER',req.params.email);
       Member.remove({email: req.params.email}, function(err) {
         if (err) {
           return res.status(500).json({

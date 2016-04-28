@@ -35,6 +35,7 @@
   // Routes
   app.get('/api/view', Member.find);
   app.post('/api/save', Member.create);
+  app.delete('/api/delete/:email', Member.delete);
 
 
   // Connect to the database

@@ -53,8 +53,15 @@ $(function () {
   $(document).on('click', '.delete', function() {
     var del = $(this).closest('tr');
     var email = del.find('.email').text();
-    console.log(del);
-    console.log(email);
+    $.ajax({
+      url: '/api/delete/' + email,
+      method: 'DELETE',
+      contentType: 'application/json',
+      success: function(response) {
+        Materialize.toast(response.message, 4000);
+        $('#get-button').trigger('click');
+      }
+    });
   });
 
   // GET STARTED button function
