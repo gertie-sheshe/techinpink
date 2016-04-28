@@ -11,6 +11,7 @@
       // Instance of a model
       var member = new Member();
       member.name = req.body.name;
+      member.email = req.body.email;
       member.save(function(err, savedMember) {
         if (err) {
           console.log(err);
@@ -27,7 +28,17 @@
     },
 
     delete: function() {
-      Member.find();
+      Member.remove({email: req.params.email}, function(err) {
+        if (err) {
+          return res.status(500).json({
+            err: err || err.errmessage
+          });
+        } else {
+          return res.status(200).json({
+            message: 'You have successfully deleted a member'
+          });
+        }
+      });
     },
     find: function(req, res) {
       Member.find(function(err, members) {
