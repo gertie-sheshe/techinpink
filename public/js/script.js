@@ -23,8 +23,16 @@ $(function () {
     });
   });
 
-  // DELETE function
-  $('#delete-button').on('click', function() {
-    
+  // GET STARTED button function
+  $('#get-started').on('click', function() {
+    document.getElementById('o').innerHTML = "<h4 id='register'>Enter Attendee: </h4> <hr> <h3>One two</h3>";
+    var b;
+    $('#get-started').text('');
+    // this.id = "go-back";
   });
+
+  // $(document).on('click', '#go-back', function() {
+  //   document.getElementById("o").innerHTML = "<h2>OoFJHFDF</h2>";
+  //   console.log('Ola');
+  // });
 });

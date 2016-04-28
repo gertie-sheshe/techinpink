@@ -4,6 +4,13 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'learningcurve';
+  src: url('../fonts/LearningCurve.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 nav .brand-logo {
   left: 3%;
 }
@@ -36,4 +43,8 @@ nav .brand-logo {
 #font {
   font-family: coffeeatmidnight;
   color: #fff;
+}
+
+#register {
+  font-family: learningcurve;
 }
