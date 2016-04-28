@@ -47,4 +47,10 @@ nav .brand-logo {
 
 #register {
   font-family: learningcurve;
+  margin-left: 40px;
+}
+
+.row {
+  margin-left: 40px;
+  /*border: 20px solid red;*/
 }

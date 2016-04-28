@@ -25,7 +25,10 @@ $(function () {
 
   // GET STARTED button function
   $('#get-started').on('click', function() {
-    document.getElementById('o').innerHTML = "<h4 id='register'>Enter Attendee: </h4> <hr> <h3>One two</h3>";
+    document.getElementById('o').innerHTML = "<h4 id='register'>Enter Attendee: </h4> " +
+    "<form class='col s12'> <div class='row'> <div class='input-field col s6'>  " +
+    " <input type='text' id='attendee'>  <label for='attendee'> Attendee" +
+    "</label> </div> </div> </form> <hr>";
     var b;
     $('#get-started').text('');
     // this.id = "go-back";
