@@ -26,9 +26,21 @@
       // Assignment. Learn how to do this
     },
 
-    delete: function() {},
+    delete: function() {
+      Member.find();
+    },
     find: function(req, res) {
-      res.send({name: 'Gerty', age: 21});
+      Member.find(function(err, members) {
+        if (err) {
+          return res.status(500).json({
+            err: err || err.errmessage
+          });
+        } else {
+          return res.status(200).json({
+            members: members
+          });
+        }
+      });
     }
   };
 })();

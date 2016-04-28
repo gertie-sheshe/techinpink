@@ -52,5 +52,13 @@ nav .brand-logo {
 
 .row {
   margin-left: 40px;
-  /*border: 20px solid red;*/
+}
+
+.delete {
+  cursor: pointer;
+}
+
+#get-button {
+  margin-bottom: 30px;
+  left: 45%;
 }
