@@ -66,7 +66,7 @@ $(function () {
 
   // GET STARTED button function
   $('#get-started').on('click', function() {
-    document.getElementById('o').innerHTML = "<h4 id='register'>Register Attendee: </h4> " +
+    document.getElementById('o').innerHTML = "<div class='row'><h4 class='col s12' id='register'>Register Attendee: </h4> " +
     "<form class='col s12'> " +
       "<div class='row'> " +
         "<div class='input-field col s6'>  " +
@@ -82,9 +82,9 @@ $(function () {
         "</div> " +
       "</div>" +
     "</form> " +
-    "<a id='get-button' class='waves-effect waves-light btn #880e4f pink darken-4 col s2 offset-s8'>View all</a><hr>" +
-    "<div class='row'> " +
-      "<table class='striped col s10 offset-s1' id='list'> " +
+    "<div class='container centered'><a id='get-button' class='waves-effect waves-light btn #880e4f pink darken-4'>View all</a></div><br/><hr>" +
+    "<div class='col s12'> " +
+      "<table class='striped' id='list'> " +
         "<thead> " +
           "<tr> " +
             "<th>Name</th> " +
@@ -103,7 +103,7 @@ $(function () {
             "</tr> " +
           "</tbody> " +
         "</table> " +
-      "</div>";
+      "</div></div>";
     $('#get-started').text('');
   });
 });
