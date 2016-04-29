@@ -66,44 +66,8 @@ $(function () {
 
   // GET STARTED button function
   $('#get-started').on('click', function() {
-    document.getElementById('o').innerHTML = "<div class='row'><h4 class='col s12' id='register'>Register Attendee: </h4> " +
-    "<form class='col s12'> " +
-      "<div class='row'> " +
-        "<div class='input-field col s6'>  " +
-          "<input type='text' id='attendee'> " +
-          "<label for='attendee'> Attendee </label>" +
-        "</div> " +
-      "</div>" +
-      "<div class='row'> " +
-        "<div class='input-field col s6'>  " +
-          "<input type='email' id='email'> " +
-          "<label for='email'> Email </label>" +
-          "<a id='post-button' class='waves-effect waves-light btn #880e4f pink darken-4'>Add</a>" +
-        "</div> " +
-      "</div>" +
-    "</form> " +
-    "<div class='container centered'><a id='get-button' class='waves-effect waves-light btn #880e4f pink darken-4'>View all</a></div><br/><hr>" +
-    "<div class='col s12'> " +
-      "<table class='striped' id='list'> " +
-        "<thead> " +
-          "<tr> " +
-            "<th>Name</th> " +
-            "<th>Email</th> " +
-            "<th>Venue</th> " +
-            "<th>Day</th>" +
-          "</tr> " +
-        "</thead> " +
-          "<tbody> " +
-            "<tr> " +
-              "<td class='name'>Gertrude</td> " +
-              "<td>gertienyesh@gmail.com</td>" +
-              "<td>Andela</td>" +
-              "<td>Saturday</td> " +
-              "<td><i class='material-icons delete'>delete</i></td> " +
-            "</tr> " +
-          "</tbody> " +
-        "</table> " +
-      "</div></div>";
+    $('#o').fadeOut();
+    $('#p').show();
     $('#get-started').text('');
   });
 });

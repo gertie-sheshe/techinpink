@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech In Pink</title>
 </head>
 
@@ -21,9 +21,11 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a id="get-started">GET STARTED</a></li>
                 </ul>
+                <ul id="nav-side" class="side-nav">
+                    <li><a id="get-started">GET STARTED</a></li>
+                </ul>
             </div>
         </nav>
-
         <div id="o" class="row">
             <div id="black">
                 <div id="back"></div>
@@ -37,7 +39,48 @@
                 </div>
             </div>
         </div>
-
+        <div id="p" class='row'>
+            <h4 class='col s12' id='register'>Register Attendee: </h4>
+            <form class='col s12'>
+                <div class='row'>
+                    <div class='input-field col s6'>
+                        <input type='text' id='attendee'>
+                        <label for='attendee'> Attendee </label>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='input-field col s6'>
+                        <input type='email' id='email'>
+                        <label for='email'> Email </label>
+                        <a id='post-button' class='waves-effect waves-light btn #880e4f pink darken-4'>Add</a>
+                    </div>
+                </div>
+            </form>
+            <div class='container centered'><a id='get-button' class='waves-effect waves-light btn #880e4f pink darken-4'>View all</a></div>
+            <br/>
+            <hr>
+            <div class='col s12'>
+                <table class='striped' id='list'>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Venue</th>
+                            <th>Day</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class='name'>Gertrude</td>
+                            <td>gertienyesh@gmail.com</td>
+                            <td>Andela</td>
+                            <td>Saturday</td>
+                            <td><i class='material-icons delete'>delete</i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </body>
 
