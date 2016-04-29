@@ -6,7 +6,7 @@ $(function () {
       contentType: 'application/json',
       success: function(response) {
         var data = response.members;
-        console.log(data.email);
+        // console.log(data.email);
         // Clear the tbody
         $('tbody').html('');
         // Loop and append
@@ -30,7 +30,6 @@ $(function () {
     // Get the value from form
     var attendee = $('#attendee').val();
     var email = $('#email').val();
-    console.log(email);
     // If user has not filled form
     if (!attendee || !email) {
       Materialize.toast('Please fill in both fields', 4000);
@@ -42,8 +41,9 @@ $(function () {
         contentType: 'application/json',
         data: JSON.stringify({name: attendee, email:email}),
         success: function(response) {
+          console.log(response);
           $('#get-button').trigger('click');
-          Materialize.toast('Successfully added new user', 4000);
+          Materialize.toast(response.message, 4000);
         }
       });
     }
