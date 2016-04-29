@@ -11,10 +11,10 @@
   font-weight: normal;
   font-style: normal;
 }
-nav .brand-logo {
+/*nav .brand-logo {
   left: 3%;
 }
-
+*/
 #black {
   background-color: #000;
 }
@@ -47,18 +47,20 @@ nav .brand-logo {
 
 #register {
   font-family: learningcurve;
-  margin-left: 40px;
-}
-
-.row {
-  margin-left: 40px;
 }
 
 .delete {
   cursor: pointer;
 }
 
-#get-button {
-  margin-bottom: 30px;
-  left: 45%;
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 480px) {
+    .brand-logo {
+      margin-left: 2%;
+    }
 }
