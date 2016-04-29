@@ -1,4 +1,7 @@
 $(function () {
+
+  $(".button-collapse").sideNav();
+
   // GET function
   $(document).on('click', '#get-button', function() {
     $.ajax({
@@ -65,9 +68,12 @@ $(function () {
   });
 
   // GET STARTED button function
-  $('#get-started').on('click', function() {
+  $('.get-started').on('click', function() {
     $('#o').fadeOut();
     $('#p').show();
-    $('#get-started').text('');
+    $('.get-started').text('');
+    $('#nav-side').hide();
+    $('#sidenav-overlay').hide();
+    $('.button-collapse').hide();
   });
 });
