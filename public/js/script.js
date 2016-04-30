@@ -1,7 +1,7 @@
 $(function () {
 
   $(".button-collapse").sideNav();
-
+  $('#p').hide();
   // GET function
   $(document).on('click', '#get-button', function() {
     $.ajax({
@@ -36,7 +36,11 @@ $(function () {
     // If user has not filled form
     if (!attendee || !email) {
       Materialize.toast('Please fill in both fields', 4000);
-    } else {
+    }
+    else if (!validateEmail(email)) {
+      Materialize.toast('Please enter a valid email address', 4000);
+    }
+    else {
       // Post value if user has filled name
       $.ajax({
         url: '/api/save',
@@ -76,4 +80,14 @@ $(function () {
     $('#sidenav-overlay').hide();
     $('.button-collapse').hide();
   });
+
+  function validateEmail(email) {
+     var reg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+     if (reg.test(email)) {
+         return true;
+     } else {
+         return false;
+     }
+ }
+
 });
