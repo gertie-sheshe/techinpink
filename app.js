@@ -14,7 +14,7 @@
   app = express(),
 
   // Define your port
-  port = 3030 || process.env.PORT,
+  port = process.env.PORT || 3030,
 
   // Require the config file
   config = require('./config/config'),
