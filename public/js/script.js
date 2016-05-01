@@ -35,7 +35,7 @@ $(function () {
     // If user has not filled form
     if (!attendee || !email) {
       Materialize.toast('Please fill in both fields', 4000);
-    }
+    } // checks if email follows valid format. Find validateEmail function at bottom of file
     else if (!validateEmail(email)) {
       Materialize.toast('Please enter a valid email address', 4000);
     }
@@ -80,13 +80,13 @@ $(function () {
     $('.button-collapse').hide();
   });
 
+  // Function to validate the email entered. Used in POST 
   function validateEmail(email) {
-     var reg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+     var reg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
      if (reg.test(email)) {
          return true;
      } else {
          return false;
      }
  }
-
 });
