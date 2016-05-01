@@ -31,7 +31,6 @@
     },
 
     delete: function(req, res) {
-      console.log('KWA SERVER',req.params.email);
       Member.remove({email: req.params.email}, function(err) {
         if (err) {
           return res.status(500).json({
@@ -44,6 +43,7 @@
         }
       });
     },
+    
     find: function(req, res) {
       Member.find(function(err, members) {
         if (err) {

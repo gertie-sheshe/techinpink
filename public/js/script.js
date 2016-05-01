@@ -9,7 +9,6 @@ $(function () {
       contentType: 'application/json',
       success: function(response) {
         var data = response.members;
-        // console.log(data.email);
         // Clear the tbody
         $('tbody').html('');
         // Loop and append
